@@ -164,7 +164,7 @@ end
 end
 
 def player_numbers(team_search)
-#returns array of the jersey numbers for that team
+  game_hash.map([]) do || 
 end
 
 def player_stats(player_name)
