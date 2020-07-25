@@ -194,6 +194,9 @@ def player_stats(player_search)
 end
 
 def big_shoe_rebounds
-#returns number of rebounds associated with the player that has the largest shoe size 
-#find player with the largest shoe size - then reurn that players rebounds - think about return values
+  game_hash.each do |team, team_info|
+    team_info.each do |key, value|
+      if key == :players
+        value.each do |shoe|
+          
 end
