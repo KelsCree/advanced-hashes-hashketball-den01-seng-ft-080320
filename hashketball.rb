@@ -170,9 +170,9 @@ def player_numbers(team_search)
       team_info.each do |key, value|
         if key == :players
           value.each do |player|
+            binding.pry
         new_array.push(player[:number])
         team_info.each do |team|
-          binding.pry
           new_array.push(team[:away][:players][:number])
 end
 end
