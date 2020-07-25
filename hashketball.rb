@@ -173,6 +173,9 @@ def player_numbers(team_search)
           team[:away][:players][:number].push(new_array)
 end
 end
+end
+end
+end
 return new_array
 end
 
