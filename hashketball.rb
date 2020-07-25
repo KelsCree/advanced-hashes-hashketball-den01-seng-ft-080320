@@ -165,11 +165,12 @@ end
 
 def player_numbers(team_search)
   new_array = []
-  game_hash.map do |team, team_info|
-    if team_search == team[:home][:team_name]
-      team_info.each do |team|
-        new_array.push(team[:home][:players][:number])
-      if
+  game_hash.each do |team, team_info|
+    if team_search == team_info[:team_name]
+      team_info.each do |key, value|
+        if key == :players
+          value.each do |player|
+        new_array.push(player[:number])
         team_info.each do |team|
           binding.pry
           new_array.push(team[:away][:players][:number])
