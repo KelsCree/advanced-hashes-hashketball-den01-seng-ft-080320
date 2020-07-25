@@ -1,4 +1,6 @@
 # Write your code below game_hash
+require 'pry'
+
 def game_hash
   {
     home: {
@@ -127,3 +129,49 @@ def game_hash
 end
 
 # Write code here
+def num_points_scored(player_search)
+  game_hash.each do |team, team_info|
+    team_info[:players].each do |player|
+      if player[:player_name] == player_search
+        return player[:points]
+      end
+    end
+    end
+end
+
+def shoe_size(player_search)
+  game_hash.each do |team, team_info|
+    team_info[:players].each do |player|
+      if player[:player_name] == player_search
+        return player[:shoe]
+      end
+    end
+  end
+end
+
+def team_colors(team_search)
+  if team_search == game_hash[:home][:team_name]
+    return game_hash[:home][:colors]
+  else
+    return game_hash[:away][:colors]
+  end
+end
+
+def team_names
+  game_hash.map do |team, team_info|
+    team_info[:team_name]
+end
+end
+
+def player_numbers(team_name)
+#returns array of the jersey numbers for that team
+end
+
+def player_stats(player_name)
+#returns hash of that player's stats
+end
+
+def big_shoe_rebounds
+#returns number of rebounds associated with the player that has the largest shoe size 
+#find player with the largest shoe size - then reurn that players rebounds - think about return values
+end
