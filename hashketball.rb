@@ -165,8 +165,15 @@ end
 
 def player_numbers(team_search)
   game_hash.map([]) do |(team, team_info), new_array|
-    
+    if team_search == team[:home][:team_name]
+      team_info.each do |team|
+        team[:home][:players][:number].push(new_array)
+      else
+        team_info.each do |team|
+          team[:away][:players][:number].push(new_array)
 end
+end
+return new_array
 end
 
 def player_stats(player_name)
