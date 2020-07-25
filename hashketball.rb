@@ -170,6 +170,7 @@ def player_numbers(team_search)
         team[:home][:players][:number].push(new_array)
       if
         team_info.each do |team|
+          binding.pry
           team[:away][:players][:number].push(new_array)
 end
 end
