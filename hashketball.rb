@@ -179,8 +179,19 @@ def player_numbers(team_search)
 return new_array
 end
 
-def player_stats(player_name)
-#returns hash of that player's stats
+def player_stats(player_search)
+  game_hash.each do |team, team_info|
+    team_info.each do |key, value|
+      if key == :players
+        value.each do |player|
+          if player_search == :player_name
+            player.delete(:player_name)
+        return player
+          end
+        end
+      end
+    end
+  end
 end
 
 def big_shoe_rebounds
