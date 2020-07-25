@@ -163,7 +163,7 @@ def team_names
 end
 end
 
-def player_numbers(team_name)
+def player_numbers(team_search)
 #returns array of the jersey numbers for that team
 end
 
