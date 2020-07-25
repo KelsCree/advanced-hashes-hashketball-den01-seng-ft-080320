@@ -172,8 +172,6 @@ def player_numbers(team_search)
           value.each do |player|
             binding.pry
         new_array.push(player[:number])
-        team_info.each do |team|
-          new_array.push(team[:away][:players][:number])
 end
 end
 end
