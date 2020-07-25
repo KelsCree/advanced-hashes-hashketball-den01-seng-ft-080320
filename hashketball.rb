@@ -164,7 +164,9 @@ end
 end
 
 def player_numbers(team_search)
-  game_hash.map([]) do || 
+  game_hash.map([]) do |(team, team_info), new_array|
+    
+end
 end
 
 def player_stats(player_name)
