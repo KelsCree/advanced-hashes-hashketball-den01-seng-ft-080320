@@ -172,12 +172,11 @@ def player_numbers(team_search)
           value.each do |player|
             binding.pry
         new_array.push(player[:number])
-end
-end
-end
-end
-end
-end
+          end
+        end
+      end
+    end
+  end
 return new_array
 end
 
